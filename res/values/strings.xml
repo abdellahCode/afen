@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">aFen</string>
+    <string name="hello_world">aFen !</string>
+    <string name="success_message">success !</string>
+    <string name="failure_message">failure !</string>
+    <string name="title_activity_people">PeopleActivity</string>
+
+</resources>
