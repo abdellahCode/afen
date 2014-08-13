@@ -28,23 +28,29 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Parse.initialize(this, APPLICATION_ID, CLIENT_KEY); 
-
+//		try{
+//			Parse.initialize(this, APPLICATION_ID, CLIENT_KEY); 
+//		}
+//		catch(Exception e){
+//
+//		}
 		// Specify an Activity to handle all pushes by default.
 		PushService.setDefaultPushCallback(this, PeopleActivity.class);
 
 		usernameEditText = (EditText) findViewById(R.id.username);
 
-	}
-
-	public void onStart(){
-		super.onStart();
 		String username = ParseInstallation.getCurrentInstallation().getString("username");
 		if(username != null)
 			if(username.length() > 0){
 				startActivity(new Intent(this, PeopleActivity.class));
 				this.finish();
 			}
+
+
+	}
+
+	public void onStart(){
+		super.onStart();
 
 
 	}
